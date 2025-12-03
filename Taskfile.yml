@@ -1,0 +1,80 @@
+version: '3'
+
+tasks:
+  default:
+    desc: List all available tasks
+    cmds:
+      - task --list
+
+  install:
+    desc: Install dependencies
+    cmds:
+      - bun install
+
+  dev:
+    desc: Run in development mode with watch
+    cmds:
+      - bun run dev
+
+  build:
+    desc: Build the project
+    cmds:
+      - bun run build
+
+  start:
+    desc: Run the built project
+    cmds:
+      - bun run start
+
+  test:
+    desc: Run tests
+    cmds:
+      - bun test
+
+  test:watch:
+    desc: Run tests in watch mode
+    cmds:
+      - bun test --watch
+
+  lint:
+    desc: Run ESLint
+    cmds:
+      - bun run lint
+
+  lint:fix:
+    desc: Run ESLint and fix issues
+    cmds:
+      - bun run lint:fix
+
+  format:
+    desc: Format code with Prettier
+    cmds:
+      - bun run format
+
+  format:check:
+    desc: Check code formatting
+    cmds:
+      - bun run format:check
+
+  typecheck:
+    desc: Run TypeScript type checking
+    cmds:
+      - bun run typecheck
+
+  check:
+    desc: Run all checks (lint, format, typecheck, test)
+    cmds:
+      - task: lint
+      - task: format:check
+      - task: typecheck
+      - task: test
+
+  clean:
+    desc: Clean build artifacts
+    cmds:
+      - rm -rf dist node_modules
+
+  setup:
+    desc: Setup pre-commit hooks
+    cmds:
+      - pre-commit install
