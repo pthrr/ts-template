@@ -8,7 +8,11 @@
       "Bash(bun run format:check:*)",
       "Bash(bun run build:*)",
       "Bash(bun run start)",
-      "Bash(tree:*)"
+      "Bash(tree:*)",
+      "Bash(bun add:*)",
+      "Bash(task test)",
+      "Bash(task test:jest:*)",
+      "Bash(pre-commit run:*)"
     ],
     "deny": [],
     "ask": []

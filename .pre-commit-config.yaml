@@ -16,26 +16,26 @@ repos:
         name: prettier
         entry: bun run format:check
         language: system
-        types: [typescript]
+        types: [ts]
         pass_filenames: false
 
       - id: eslint
         name: eslint
         entry: bun run lint
         language: system
-        types: [typescript]
+        types: [ts]
         pass_filenames: false
 
       - id: typecheck
         name: typecheck
         entry: bun run typecheck
         language: system
-        types: [typescript]
+        types: [ts]
         pass_filenames: false
 
       - id: test
         name: test
         entry: bun test
         language: system
-        types: [typescript]
+        types: [ts]
         pass_filenames: false

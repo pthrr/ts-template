@@ -36,6 +36,11 @@ tasks:
     cmds:
       - bun test --watch
 
+  test:jest:
+    desc: Run Jest tests with fast-check
+    cmds:
+      - NODE_OPTIONS="--experimental-vm-modules" npx jest
+
   lint:
     desc: Run ESLint
     cmds:
